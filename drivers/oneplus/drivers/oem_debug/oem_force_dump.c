@@ -186,7 +186,7 @@ struct netlink_kernel_cfg nl_kernel_cfg = {
 
 int op_netlink_init(void)
 {
-	nl_sk = netlink_kernel_create(&init_net, &nl_kernel_cfg);
+	nl_sk = netlink_kernel_create(&init_net, NETLINE_ADB, &nl_kernel_cfg);
 	if (!nl_sk) {
 		pr_err("%s: Create netlink socket error.\n", __func__);
 		return 1;
