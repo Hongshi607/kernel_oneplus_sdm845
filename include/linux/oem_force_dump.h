@@ -8,7 +8,8 @@
 
 #ifndef OEM_FORCE_DUMP_H
 #define OEM_FORCE_DUMP_H
-#define NETLINK_ADB         23
+#ifndef NETLINK_ADB
+#define NETLINK_ADB
 
 extern void oem_check_force_dump_key(unsigned int code, int value);
 extern int oem_get_download_mode(void);
